@@ -17,7 +17,20 @@
 <div id="panorama"></div>
 <script>
 pannellum.viewer('panorama', {
-    "type": "cubemap",
+    "default": {
+        "firstScene": "house",
+        "author": "M B-Schmitt",
+        "sceneFadeDuration": 1000
+    },
+    
+    
+   "scenes": {
+        "house": {
+            "title": "",
+            "hfov": 120,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "cubemap",
     "cubeMap": [
         "Files/Images/cubemapey5/panorama2.front.jpg",
         "Files/Images/cubemapey5/panorama2.right.jpg",
@@ -25,7 +38,48 @@ pannellum.viewer('panorama', {
         "Files/Images/cubemapey5/panorama2.left.jpg",
         "Files/Images/cubemapey5/panorama2.top.jpg",
         "Files/Images/cubemapey5/panorama2.bottom.jpg"
-    ]
+    ],
+            "autoLoad": true,
+            "compass": true,
+            "northOffset": 247.5,
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 185,
+                    "type": "scene",
+                    "text": "view1",
+                    "sceneId": "river"
+                }
+               
+            ]
+        },
+
+        "river": {
+            "title": "",
+            "hfov": 120,
+            "yaw": -3,
+             "type": "cubemap",
+    "cubeMap": [
+        "Files/Images/cubemapey5/panorama3.front.jpg",
+        "Files/Images/cubemapey5/panorama3.right.jpg",
+        "Files/Images/cubemapey5/panorama3.back.jpg",
+        "Files/Images/cubemapey5/panorama3.left.jpg",
+        "Files/Images/cubemapey5/panorama3.top.jpg",
+        "Files/Images/cubemapey5/panorama3.bottom.jpg"
+    ],
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 137.1,
+                    "type": "scene",
+                    "text": "view2",
+                    "sceneId": "house",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+         }
+       }
 });
 </script>
 
