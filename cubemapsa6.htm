@@ -1,0 +1,152 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube map</title>
+    <link rel="stylesheet" href="pannellum.css"/>
+    <script type="text/javascript" src="pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 100%;
+        height: 540px;
+    }
+    </style>
+</head>
+<body>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "mainhouse",
+        "author": "M B-Schmitt",
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "mainhouse": {
+            "title": "main house",
+            "hfov": 120,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "Files/Image/PSV/Panorama54.jpg",
+            "autoLoad": true,
+            "compass": true,
+            "northOffset": 247.5,
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 280,
+                    "type": "scene",
+                    "text": "house and gites",
+                    "sceneId": "housegites"
+                }
+               
+            ]
+        },
+        "housegites": {
+            "title": "main house and gites",
+            "hfov": 120,
+            "yaw": -3,
+            "type": "equirectangular",
+            "panorama": "Files/Image/PSV/Panorama53.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 40,
+                    "type": "scene",
+                    "text": "terrace",
+                    "sceneId": "terrace",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+                ]
+            },
+                
+        "terrace": {
+            "title": "terrace",
+            "hfov": 110,
+            "yaw": -3,
+            "type": "equirectangular",
+            "panorama": "Files/Image/PSV/Panorama52.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 137.1,
+                    "type": "scene",
+                    "text": "main house",
+                    "sceneId": "mainhouse",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 200,
+                    "type": "scene",
+                    "text": "the pound",
+                    "sceneId": "thepound",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                } 
+            ]
+        },
+        "thepound": {
+            "title": "the pound",
+            "hfov": 110,
+            "yaw": -3,
+            "type": "equirectangular",
+            "panorama": "Files/Image/PSV/Panorama55.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 137.1,
+                    "type": "scene",
+                    "text": "main house",
+                    "sceneId": "mainhouse",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "the pool",
+                    "sceneId": "thepool",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                } 
+            ]
+        },
+        "thepool": {
+            "title": "the pool",
+            "hfov": 110,
+            "yaw": -3,
+            "type": "equirectangular",
+            "panorama": "Files/Image/PSV/Panorama56.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 137.1,
+                    "type": "scene",
+                    "text": "main house",
+                    "sceneId": "mainhouse",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 200,
+                    "type": "scene",
+                    "text": "the pound",
+                    "sceneId": "thepound",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                } 
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+
+
+</html>
